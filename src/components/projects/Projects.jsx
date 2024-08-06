@@ -4,6 +4,11 @@ import '../style.css'
 import '../media.css'
 import project1 from '../../assets/project-1.png'
 import arrow from '../../assets/arrow.png'
+import ProjectCard from '../cards/ProjectCard'
+
+import {project_data} from '../../data/projectData'
+
+
 
 const Projects = () => {
   return (
@@ -12,78 +17,8 @@ const Projects = () => {
       <h1 className="title">Projects</h1>
       <div className="experience-details-container">
         <div className="about-containers">
-          <div className="details-container color-container">
-            <div className="article-container">
-              <img
-                src={project1}
-                alt="Project 1"
-                className="project-img"
-              />
-            </div>
-            <h2 className="experience-sub-title project-title">Project One</h2>
-            <div className="btn-container">
-              <button
-                className="btn btn-color-2 project-btn"
-                onClick={() => window.location.href='https://github.com/'}
-              >
-                Github
-              </button>
-              <button
-                className="btn btn-color-2 project-btn"
-                onClick={() => window.location.href='https://github.com/'}
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div className="details-container color-container">
-            <div className="article-container">
-              <img
-                src={project1}
-                alt="Project 2"
-                className="project-img"
-              />
-            </div>
-            <h2 className="experience-sub-title project-title">Project Two</h2>
-            <div className="btn-container">
-              <button
-                className="btn btn-color-2 project-btn"
-                onClick={() => window.location.href='https://github.com/'}
-              >
-                Github
-              </button>
-              <button
-                className="btn btn-color-2 project-btn"
-                onClick={() => window.location.href='https://github.com/'}
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div className="details-container color-container">
-            <div className="article-container">
-              <img
-                src={project1}
-                alt="Project 3"
-                className="project-img"
-              />
-            </div>
-            <h2 className="experience-sub-title project-title">Project Three</h2>
-            <div className="btn-container">
-              <button
-                className="btn btn-color-2 project-btn"
-                onClick={() => window.location.href='https://github.com/'}
-              >
-                Github
-              </button>
-              <button
-                className="btn btn-color-2 project-btn"
-                onClick={() => window.location.href='https://github.com/'}
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
+          
+           
         </div>
       </div>
       <img
@@ -92,6 +27,17 @@ const Projects = () => {
         className="icon arrow"
         onClick={() => window.location.href='#contact'}
       />
+
+      <div className='row'>
+
+      {project_data.map((project) => (
+        <div className='col-lg-6 col-md-6 col-sm-12 mb-5 d-flex justify-content-center align-items-center'>
+
+          <ProjectCard image = {project.image} git={project.github} live={project.live}/>
+        </div>
+      ))}
+      </div>
+
     </section>
   )
 }

@@ -29,7 +29,7 @@ const About = () => {
                 className="icon"
               />
               <h3>Experience</h3>
-              <p>0 - 1 years <br />Ful-Stack Development</p>
+              <p>0 - 1 years <br />Full-Stack Development</p>
             </div>
             <div className="details-container">
               <img

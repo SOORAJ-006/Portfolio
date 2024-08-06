@@ -1,177 +1,44 @@
-import React from 'react'
-import './Experience.css'
-import '../style.css'
-import '../media.css'
-import checkMark from '../../assets/checkmark.png'
-import arrow from '../../assets/arrow.png'
+import React from "react";
+import {Card , Button } from 'react-bootstrap'
+import "./Experience.css";
+import "../style.css";
+import "../media.css";
+import checkMark from "../../assets/checkmark.png";
+import arrow from "../../assets/arrow.png";
+import mongo from '../../assets/Mongo.png'
+import MediaCard from "../cards/MediaCard";
+import {skills} from '../../data/skillData'
+
 
 const Experience = () => {
+  console.log(skills);
   return (
     <section id="experience">
       <p className="section__text__p1">Explore My</p>
-      <h1 className="title">Experience</h1>
+      <h1 className="title mb-5">Skills</h1>
       <div className="experience-details-container">
-        <div className="about-containers">
-          <div className="details-container">
-            <h2 className="experience-sub-title">Frontend Development</h2>
-            <div className="article-container">
-              <article>
-                <img
-                  src={checkMark}
-                  alt="Experience icon"
-                  className="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src={checkMark}
-                  alt="Experience icon"
-                  className="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src={checkMark}
-                  alt="Experience icon"
-                  className="icon"
-                />
-                <div>
-                  <h3>Bootstrap</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src={checkMark}
-                  alt="Experience icon"
-                  className="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src={checkMark}
-                  alt="Experience icon"
-                  className="icon"
-                />
-                <div>
-                  <h3>React</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src={checkMark}
-                  alt="Experience icon"
-                  className="icon"
-                />
-                <div>
-                  <h3>Vite</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
 
 
-          <div className="details-container">
-            <h2 className="experience-sub-title">Backend Development</h2>
-            <div className="article-container">
-              <article>
-                <img
-                  src={checkMark}
-                  alt="Experience icon"
-                  className="icon"
-                />
-                <div>
-                  <h3>MongoDb</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-
-              <article>
-                <img
-                  src={checkMark}
-                  alt="Experience icon"
-                  className="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-
-              <article>
-                <img
-                  src={checkMark}
-                  alt="Experience icon"
-                  className="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-
-              <article>
-                <img
-                  src={checkMark}
-                  alt="Experience icon"
-                  className="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-
-              <article>
-                <img
-                  src={checkMark}
-                  alt="Experience icon"
-                  className="icon"
-                />
-                <div>
-                  <h3>MySQL</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-
-              <article>
-                <img
-                  src={checkMark}
-                  alt="Experience icon"
-                  className="icon"
-                />
-                <div>
-                  <h3>MSSQL</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-
-            </div>
-          </div>
-        </div>
       </div>
       <img
         src={arrow}
         alt="Arrow icon"
         className="icon arrow"
-        onClick={() => window.location.href='#projects'}
+        onClick={() => (window.location.href = "#projects")}
       />
-    </section>
-  )
-}
 
-export default Experience
+      <div className="row">
+
+        {skills.map((skill) => (
+          <div className="col-lg-3 col-md-4 col-sm-6 mb-5">
+          <MediaCard skill={skill}/>
+          </div>
+
+        ))}
+
+      </div>
+    </section>
+  );
+};
+
+export default Experience;

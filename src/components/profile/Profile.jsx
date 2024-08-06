@@ -24,7 +24,7 @@ const Profile = () => {
           >
             Download CV
           </button>
-          <button className="btn btn-color-1" onClick={() => window.location.href='#contact'}>
+          <button className="btn btn-color-1 btn-lg" onClick={() => window.location.href='#contact'}>
             Contact Info
           </button>
         </div>

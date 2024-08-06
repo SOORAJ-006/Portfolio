@@ -149,9 +149,10 @@ a:hover {
 /* SECTIONS */
 
 section {
+  max-width: 1080px;
   padding-top: 4vh;
-  height: 96vh;
-  margin: 0 10rem;
+  min-height: 96vh;
+  margin: 0 auto;
   box-sizing: border-box;
   min-height: fit-content;
 }
@@ -429,4 +430,18 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+.skills {
+  display: grid;
+  justify-items: center;
+  grid-gap: 4px;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+
+}
+
+.skill{
+  width: 250px; 
 }
