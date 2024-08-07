@@ -27,10 +27,10 @@ const Experience = () => {
         onClick={() => (window.location.href = "#projects")}
       />
 
-      <div className="row">
+      <div className="row justify-content-center">
 
         {skills.map((skill) => (
-          <div className="col-lg-3 col-md-4 col-sm-6 mb-5">
+          <div className="col-lg-3 col-md-4 col-sm-6 mb-5 skill_card">
           <MediaCard skill={skill}/>
           </div>
 

@@ -34,15 +34,19 @@ nav,
 }
 
 nav {
-  justify-content: space-around;
-  align-items: center;
-  height: 17vh;
+  justify-content: space-between;
+  padding: 0 20px;
+    align-items: center;
+    height: 100px;
+    max-width: 1080px;
+    margin: 0 auto;
 }
 
 .nav-links {
   gap: 2rem;
   list-style: none;
   font-size: 1.5rem;
+  justify-content: space-around;
 }
 
 a {
@@ -167,7 +171,7 @@ section {
   display: flex;
   justify-content: center;
   gap: 5rem;
-  height: 80vh;
+  /* height: 600px; */
 }
 
 .section__pic-container {
@@ -387,7 +391,7 @@ article .icon {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 70vh;
+
 }
 
 .contact-info-upper-container {
@@ -445,3 +449,12 @@ footer p {
 .skill{
   width: 250px; 
 }
+
+
+.skill_card{
+  width: 240px;
+  height: 135px;
+}
+
+/* toggle */
+

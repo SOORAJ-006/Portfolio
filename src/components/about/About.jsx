@@ -22,15 +22,9 @@ const About = () => {
         </div>
         <div className="about-details-container">
           <div className="about-containers">
-            <div className="details-container">
-              <img
-                src={experience}
-                alt="Experience icon"
-                className="icon"
-              />
-              <h3>Experience</h3>
-              <p>0 - 1 years <br />Full-Stack Development</p>
-            </div>
+
+ 
+
             <div className="details-container">
               <img
                 src={education}
@@ -40,6 +34,7 @@ const About = () => {
               <h3>Education</h3>
               <p>B.Sc. Bachelors Degree,<br /> -Kerala University</p>
             </div>
+
           </div>
           <div className="text-container">
             <p>
